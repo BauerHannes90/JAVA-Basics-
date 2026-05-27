@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bitte eine Zahl eingeben: ");
+        int eingabe = sc.nextInt();
+
+        System.out.println("Deine Eingabe war: " + eingabe);
+
+        sc.close();
+
+    }
+}
