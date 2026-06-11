@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
         int start;
         String response;
@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("We're starting the count down! ");
         System.out.print("Are you ready?(yes or no)");
-        response = scan.nextLine().toUpperCase();
+        response = scan.nextLine().toLowerCase();
 
         while (!response.equals("yes"))
             {
@@ -24,6 +24,7 @@ public class Main {
 
         for(int i = start; i > 0; i--){
         System.out.println(i);
+        Thread.sleep(1000);
 
 
 
@@ -34,3 +35,4 @@ public class Main {
 
     }
 }
+
