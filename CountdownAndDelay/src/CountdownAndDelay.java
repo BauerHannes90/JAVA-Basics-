@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class CountdownAndDelay
+{
+    public static void main(String[] args) throws InterruptedException
+    {
+        int start;
+        String response;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("We're starting the count down! ");
+        System.out.print("Are you ready?(yes or no)");
+        response = scan.nextLine().toLowerCase();
+
+        while (!response.equals("yes"))
+            {
+            System.out.println("alright, I can wait");
+            System.out.println("Are you ready?(yes or no)");
+            response = scan.nextLine();
+            }
+
+        System.out.print("Where do you want to start? ");
+        start = scan.nextInt();
+
+        for(int i = start; i > 0; i--){
+        System.out.println(i);
+        Thread.sleep(1000);
+
+
+
+        }
+        System.out.println("FUCK YEAH! ");
+
+        scan.close();
+
+    }
+}
